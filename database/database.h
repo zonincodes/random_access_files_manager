@@ -1,8 +1,6 @@
 #ifndef DATABASE
 #define DATABASE
 
-#include <iostream>
-#include <fstream>
 template <class T>
 class Database
 {
