@@ -15,3 +15,21 @@ void Database<T>::add(T &d){
     d.writetoFile(database);
     database.close();
 }
+
+template<class T>
+void Database<T>::modify(const T &d){
+    T tmp;
+    database.open(fName, ios::in | ios::out | ios::binary);
+    while (!database.eof()){
+        tmp.readFromFile(database);
+        if (tmp == d){// overloaded ==
+            cin >> tmp; // overloaded >>
+            database.seekp(-d.size(), ios::cur);
+            tmp.writeToFile(database);
+            database.close();
+            return;
+        }
+    }
+    database.close();
+    cout << "The record to be modified is not in the database \n";
+}
