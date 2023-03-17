@@ -1,6 +1,8 @@
 #ifndef DATABASE
 #define DATABASE
-
+#include <fstream>
+#include <iostream>
+using namespace std;
 template <class T>
 class Database
 {
@@ -9,13 +11,13 @@ public:
     void run();
 
 private:
-    fstream database;
+    std::fstream database;
     char fName[20];
-    ostream &print(ostream &);
+    std::ostream &print(std::ostream &);
     void add(T &);
     void modify(const T &);
     bool find(const T &);
-    friend ostream &operator<<(ostream &out, Database &db)
+    friend std::ostream &operator<<(std::ostream &out, Database &db)
     {
         return db.print(out);
     }
