@@ -12,7 +12,7 @@ template<class T>
 void Database<T>::add(T &d){
     database.open(fName, ios::in | ios::out | ios::binary);
     database.seekp(0, ios::end);
-    d.writetoFile(database);
+    d.writeToFile(database);
     database.close();
 }
 
