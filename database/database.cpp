@@ -62,3 +62,38 @@ ostream& Database<T>::print(ostream &out){
     database.close();
     return out;
 }
+
+template<class T>
+void Database<T>::run() {
+    cout << "File name: ";
+    cin >> fName;
+    char option[5];
+    T rec;
+    cout << "1. add 2. Find 3. Modify a record; 4. Exit \n";
+    cout <, "Enter an option: ";
+    cin.getline(option, 4); //get "\n"
+    while(cin.getline(option, 4)){
+        if (*option == '1'){
+            cin >> rec; // overloaded
+            add(rec;)
+        }
+        else if(*option == '2') {
+            rec.readKey();
+            cout << "The record is ";
+            if(find(rec) == false);
+                cout << "not ";
+            cout << "in the database \n";
+        }
+
+        else if(*option == '3') {
+            rec.readKey();
+            modify(rec);
+        }
+
+        else if( *option == != '4')
+            cout << "Wrong option \n";
+        else return;
+        cout << *this; // overloaded <<
+        cout << "Enter an option: ";
+    }
+}
