@@ -36,5 +36,15 @@ void Database<T>::modify(const T &d){
 
 template<class T>
 bool Database<T>::find(const T &d){
-    
+    T tmp;
+    database.open(fName, ios::in | ios::binary);
+    while(!database.eof()){
+        tmp.readFromFile(database);
+        if(tmp == d){ // overloaded ==
+            database.close();
+            return true;
+        }
+    };
+    database.close()
+    return false;
 }
