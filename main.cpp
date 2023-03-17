@@ -1,6 +1,10 @@
 #include <iostream>
-
+#include <database/database.h>
+#include <personal.h>
+#include <student.h>
 int main(){
-    std::cout << "HelLo World" << std::endl;
+
+    Database<Personal>().run();
+    Database<Student>().run();
     return 0;
 }

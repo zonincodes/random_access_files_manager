@@ -44,15 +44,15 @@ bool Database<T>::find(const T &d){
             database.close();
             return true;
         }
-    };
-    database.close()
+    }
+    database.close();
     return false;
 }
 
 template <class T>
 ostream& Database<T>::print(ostream &out){
     T tmp;
-    database.open(fName, iod::in | ios::binary);
+    database.open(fName, ios::in|ios::binary);
     while(true){
         tmp.readFromFile(database);
         if(database.eof())
@@ -70,12 +70,12 @@ void Database<T>::run() {
     char option[5];
     T rec;
     cout << "1. add 2. Find 3. Modify a record; 4. Exit \n";
-    cout <, "Enter an option: ";
+    cout << "Enter an option: ";
     cin.getline(option, 4); //get "\n"
     while(cin.getline(option, 4)){
         if (*option == '1'){
             cin >> rec; // overloaded
-            add(rec;)
+            add(rec);
         }
         else if(*option == '2') {
             rec.readKey();
@@ -90,7 +90,7 @@ void Database<T>::run() {
             modify(rec);
         }
 
-        else if( *option == != '4')
+        else if( *option != '4')
             cout << "Wrong option \n";
         else return;
         cout << *this; // overloaded <<

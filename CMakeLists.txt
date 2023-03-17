@@ -22,4 +22,4 @@ target_link_directories(${PROJECT_NAME}
     PUBLIC database
 )
 
-target_link_libraries(${PROJECT_NAME} personal student)
+target_link_libraries(${PROJECT_NAME} personal student database)
