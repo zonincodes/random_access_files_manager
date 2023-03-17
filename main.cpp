@@ -4,6 +4,6 @@
 #include <student.h>
 int main(){
     Database<Personal>().run();
-    Database<Student>().run();
+    // Database<Student>().run();
     return 0;
 }
