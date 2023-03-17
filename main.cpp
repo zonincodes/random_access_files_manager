@@ -1,5 +1,5 @@
 #include <iostream>
-#include <database.h>
+#include <database.cpp>
 #include <personal.h>
 #include <student.h>
 int main(){
