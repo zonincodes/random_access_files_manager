@@ -48,3 +48,17 @@ bool Database<T>::find(const T &d){
     database.close()
     return false;
 }
+
+template <class T>
+ostream& Database<T>::print(ostream &out){
+    T tmp;
+    database.open(fName, iod::in | ios::binary);
+    while(true){
+        tmp.readFromFile(database);
+        if(database.eof())
+            break;
+        out << tmp << endl; //overloaded <<
+    }
+    database.close();
+    return out;
+}
