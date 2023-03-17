@@ -33,3 +33,8 @@ void Database<T>::modify(const T &d){
     database.close();
     cout << "The record to be modified is not in the database \n";
 }
+
+template<class T>
+bool Database<T>::find(const T &d){
+    
+}

@@ -13,7 +13,7 @@ class Database{
         ostream &print(ostream &);
         void add(T&);
         void modify(const T&);
-
+        bool find(const T &);
         friend ostream &operator<<(ostream &out, Database &db){
             return db.print(out);
         }
