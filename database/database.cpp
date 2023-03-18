@@ -2,6 +2,7 @@
 #include <student/student.h>
 #include <personal/personal.h>
 #include "database.h"
+#include <fstream>
 
 template<class T>
 Database<T>::Database(){

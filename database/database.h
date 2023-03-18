@@ -1,8 +1,8 @@
 #ifndef DATABASE
 #define DATABASE
-#include <fstream>
+
 #include <iostream>
-using namespace std;
+#include <fstream>
 template <class T>
 class Database
 {
