@@ -10,6 +10,5 @@ add_subdirectory(student)
 add_subdirectory(database)
 
 add_executable(${PROJECT_NAME} main.cpp)
-
-
 target_link_libraries(${PROJECT_NAME} personal student database)
+
