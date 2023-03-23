@@ -2,13 +2,20 @@ cmake_minimum_required(VERSION 3.22)
 
 project(raf_manager)
 
-include_directories(${PROJECT_SOURCE_DIR})
+# source files
+set(SRC_FILES 
+    main.cpp
+    student.cpp
+    personal.cpp
+    # database.cpp
+)
 
+# header files
+set(HDR_FILES 
+    student.h
+    personal.h
+    database.h
+)
 
-add_subdirectory(personal)
-add_subdirectory(student)
-add_subdirectory(database)
-
-add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(${PROJECT_NAME} personal student database)
-
+# create an executable and link the source and header files
+add_executable(${PROJECT_NAME} ${SRC_FILES} ${HDR_FILES})

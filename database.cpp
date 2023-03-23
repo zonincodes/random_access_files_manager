@@ -1,6 +1,6 @@
 #include <iostream>
-#include <student/student.h>
-#include <personal/personal.h>
+#include "student.h"
+#include "personal.h"
 #include "database.h"
 #include <fstream>
 
