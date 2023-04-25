@@ -1,7 +1,7 @@
 #include <iostream>
-#include "student.h"
-#include "personal.h"
-#include "database.h"
+#include <student/student.h>
+#include <personal/personal.h>
+#include <database/database.h>
 #include <fstream>
 
 template<class T>

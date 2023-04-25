@@ -1,0 +1,3 @@
+add_subdirectory(database)
+add_subdirectory(student)
+add_subdirectory(personal)

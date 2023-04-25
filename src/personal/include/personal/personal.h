@@ -1,5 +1,5 @@
-#ifndef PERSONAL
-#define PERSONAL
+#ifndef PERSONAL_H
+#define PERSONAL_H
 
 #include <fstream>
 #include <cstring>
