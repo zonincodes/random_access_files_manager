@@ -1,7 +1,7 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 #include <fstream>
-#include <personal/personal.h>
+#include "personal.h"
 class Student : public Personal
 {
 public:

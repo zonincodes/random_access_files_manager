@@ -1,4 +1,4 @@
-#include <student/student.h>
+#include "student.h"
 
 Student::Student() : majorLen(10) {
     Personal();
