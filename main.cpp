@@ -57,6 +57,7 @@ bool Database<T>::find(const T &d)
     while (!database.eof())
     {
         tmp.readFromFile(database);
+        // std::cout << tmp << std::endl;
         if (tmp == d)
         { // overloaded ==
             database.close();
@@ -105,8 +106,7 @@ void Database<T>::run()
             rec.readKey();
             cout << "The record is ";
             if (find(rec) == false)
-                ;
-            cout << "not ";
+                cout << "not ";
             cout << "in the database \n";
         }
 
