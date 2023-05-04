@@ -7,16 +7,16 @@
 template <class T>
 Database<T>::Database()
 {
-    std::ofstream file("db.txt");
-    if (file.is_open())
-    {
-        file.close();
-        std::cout << "File Accessible " << std::endl;
-    }
-    else
-    {
-        std::cout << "failure to create file" << std::endl;
-    }
+    // std::ofstream file("db.txt");
+    // if (file.is_open())
+    // {
+    //     file.close();
+    //     std::cout << "File Accessible " << std::endl;
+    // }
+    // else
+    // {
+    //     std::cout << "failure to create file" << std::endl;
+    // }
 }
 
 template <class T>
